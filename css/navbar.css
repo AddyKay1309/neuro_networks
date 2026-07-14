@@ -1,0 +1,204 @@
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+#navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:all .35s ease;
+
+}
+
+#navbar.scrolled{
+
+    background:rgba(6,19,33,.82);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ---------- CONTAINER ---------- */
+
+.nav-container{
+
+    width:min(1400px,94%);
+
+    margin:auto;
+
+    height:92px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ---------- LOGO ---------- */
+
+.logo{
+
+    font-size:1.65rem;
+
+    font-weight:800;
+
+    letter-spacing:-.03em;
+
+    color:white;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2.6rem;
+
+    list-style:none;
+
+}
+
+.nav-links li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2.6rem;
+
+}
+
+/* divider */
+
+.nav-links li:not(:last-child)::after{
+
+    content:"";
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.nav-links a{
+
+    color:rgba(255,255,255,.78);
+
+    font-size:.98rem;
+
+    font-weight:500;
+
+    letter-spacing:.01em;
+
+    transition:.3s ease;
+
+}
+
+.nav-links a:hover{
+
+    color:white;
+
+}
+
+/* ---------- DONATE BUTTON ---------- */
+
+.nav-cta{
+
+    padding:.9rem 2rem;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    box-shadow:0 8px 25px rgba(59,130,246,.28);
+
+    transition:.3s ease;
+
+}
+
+.nav-cta:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 35px rgba(59,130,246,.4);
+
+}
+
+/* ---------- MOBILE ---------- */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:2rem;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:950px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .nav-cta{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    .nav-container{
+
+        height:82px;
+
+    }
+
+}

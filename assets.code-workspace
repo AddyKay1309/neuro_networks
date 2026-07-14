@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "assets"
+		},
+		{
+			"path": "backend"
+		},
+		{
+			"path": "css"
+		},
+		{
+			"path": "js"
+		},
+		{
+			"path": "neuro"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "pages"
+		}
+	]
+}

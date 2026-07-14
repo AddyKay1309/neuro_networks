@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment variables (contains API keys)
+.env
+.env.local
+.env.local.bak
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Build output
+dist/

@@ -1,0 +1,268 @@
+/* ==========================================================
+   NEURO-NETWORKS
+   BASE STYLES
+========================================================== */
+
+/* ---------- GOOGLE FONT ---------- */
+
+:root {
+
+    /* COLORS */
+
+    --bg: #061321;
+    --bg-light: #0B1E36;
+    --surface: rgba(255,255,255,0.05);
+
+    --primary: #3B82F6;
+    --primary-light: #60A5FA;
+    --primary-dark: #2563EB;
+
+    --text: #F8FAFC;
+    --text-light: #CBD5E1;
+
+    --border: rgba(255,255,255,.08);
+
+    --shadow:
+        0 15px 45px rgba(0,0,0,.25);
+
+    --glow:
+        0 0 40px rgba(96,165,250,.25);
+
+    /* SPACING */
+
+    --section-padding: 8rem;
+    --container-width: 1300px;
+
+    /* TRANSITIONS */
+
+    --transition: .35s ease;
+
+    /* RADIUS */
+
+    --radius: 20px;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Plus Jakarta Sans',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+h1,h2,h3,h4{
+
+    font-weight:700;
+
+    line-height:1.1;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container{
+
+    width:min(var(--container-width),90%);
+
+    margin-inline:auto;
+
+}
+
+/* ==========================================================
+   SECTIONS
+========================================================== */
+
+section{
+
+    padding:var(--section-padding) 0;
+
+    position:relative;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.75rem;
+
+    padding:1rem 2rem;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+    box-shadow:var(--glow);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    background:var(--primary-dark);
+
+}
+
+.btn-secondary{
+
+    border:1px solid var(--border);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,.1);
+
+}
+
+/* ==========================================================
+   GLASS CARD
+========================================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:var(--radius);
+
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ==========================================================
+   CUSTOM SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-light);
+
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}

@@ -1,0 +1,178 @@
+/* ==========================================================
+   Neuro-Networks v2
+   Design System
+   File: variables.css
+   Author: Neuro-Networks
+   ========================================================== */
+
+:root {
+
+    /* ========================================
+       COLORS
+    ======================================== */
+
+    --color-primary: #0B3C88;
+    --color-primary-light: #2563EB;
+    --color-primary-dark: #082C65;
+
+    --color-accent: #7FB5FF;
+
+    --color-white: #FFFFFF;
+
+    --color-background: #FFFFFF;
+    --color-surface: #F8FAFC;
+    --color-surface-alt: #EEF4FF;
+
+    --color-border: #E4EAF2;
+
+    --color-text: #101828;
+    --color-text-light: #667085;
+    --color-text-muted: #98A2B3;
+
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+
+
+
+    /* ========================================
+       TYPOGRAPHY
+    ======================================== */
+
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    --font-size-xs: .75rem;
+    --font-size-sm: .875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.8rem;
+    --font-size-5xl: 4rem;
+    --font-size-hero: clamp(3.5rem, 8vw, 6rem);
+
+    --line-height-body: 1.75;
+    --line-height-heading: 1.1;
+
+
+
+    /* ========================================
+       FONT WEIGHTS
+    ======================================== */
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+
+
+    /* ========================================
+       SPACING
+    ======================================== */
+
+    --space-xxs: .25rem;
+    --space-xs: .5rem;
+    --space-sm: .75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 5rem;
+    --space-4xl: 7rem;
+    --space-section: 8rem;
+
+
+
+    /* ========================================
+       CONTAINER WIDTHS
+    ======================================== */
+
+    --container-sm: 720px;
+    --container-md: 960px;
+    --container-lg: 1200px;
+    --container-xl: 1320px;
+
+
+
+    /* ========================================
+       BORDER RADIUS
+    ======================================== */
+
+    --radius-small: 12px;
+    --radius-medium: 18px;
+    --radius-large: 28px;
+    --radius-xl: 36px;
+    --radius-pill: 999px;
+
+
+
+    /* ========================================
+       SHADOWS
+    ======================================== */
+
+    --shadow-sm:
+        0 4px 12px rgba(15,23,42,.05);
+
+    --shadow-md:
+        0 12px 35px rgba(15,23,42,.08);
+
+    --shadow-lg:
+        0 30px 80px rgba(15,23,42,.12);
+
+    --shadow-glow:
+        0 0 60px rgba(37,99,235,.18);
+
+
+
+    /* ========================================
+       TRANSITIONS
+    ======================================== */
+
+    --transition-fast: .2s ease;
+    --transition-normal: .35s ease;
+    --transition-slow: .6s ease;
+
+
+
+    /* ========================================
+       NAVIGATION
+    ======================================== */
+
+    --navbar-height: 88px;
+
+
+
+    /* ========================================
+       Z-INDEX
+    ======================================== */
+
+    --z-background: -1;
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-navbar: 1000;
+    --z-overlay: 2000;
+    --z-modal: 3000;
+    --z-tooltip: 4000;
+
+
+
+    /* ========================================
+       BLUR
+    ======================================== */
+
+    --blur-light: blur(10px);
+    --blur-heavy: blur(30px);
+
+
+
+    /* ========================================
+       BORDERS
+    ======================================== */
+
+    --border-light:
+        1px solid var(--color-border);
+
+}

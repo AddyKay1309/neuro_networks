@@ -1,0 +1,342 @@
+/* ==========================================================
+   HERO
+========================================================== */
+
+#hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+        radial-gradient(circle at 72% 45%,
+            rgba(59,130,246,.12),
+            transparent 38%),
+
+        radial-gradient(circle at top,
+            rgba(59,130,246,.08),
+            transparent 48%),
+
+        linear-gradient(
+            180deg,
+            #061321 0%,
+            #08192d 55%,
+            #061321 100%
+        );
+
+}
+
+/* ==========================================================
+   GLOBE
+========================================================== */
+
+#globe-container{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+    overflow:hidden;
+
+}
+
+#globe-container canvas{
+
+    width:100%!important;
+    height:100%!important;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   CONTENT CONTAINER
+========================================================== */
+
+#hero .container{
+
+    width:min(1300px,92%);
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* ==========================================================
+   HERO CONTENT
+========================================================== */
+
+.hero-content{
+
+    width:min(650px,100%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    margin-left:100px;
+
+    gap:1.8rem;
+
+}
+
+/* ==========================================================
+   TAG
+========================================================== */
+
+.hero-tag{
+
+    padding:.8rem 1.5rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    color:#8bc4ff;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.hero-content h1{
+
+    font-size:clamp(4rem,7vw,6.4rem);
+
+    line-height:.92;
+
+    letter-spacing:-3px;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+.hero-content h1 span{
+
+    color:#7bc4ff;
+
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.hero-description{
+
+    max-width:560px;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.72);
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:1rem;
+
+    margin-top:.6rem;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    padding:15px 34px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.btn-primary{
+
+    background:#3B82F6;
+
+    color:white;
+
+    box-shadow:
+        0 0 40px rgba(59,130,246,.22);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 60px rgba(59,130,246,.35);
+
+}
+
+.btn-secondary{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* ==========================================================
+   GLOW
+========================================================== */
+
+#hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    right:-180px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(59,130,246,.15),
+
+            transparent 70%
+
+        );
+
+    filter:blur(90px);
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+/* ==========================================================
+   SCROLL INDICATOR
+========================================================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:45px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:rgba(255,255,255,.45);
+
+    font-size:.85rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:1000px){
+
+    #hero{
+
+        text-align:center;
+
+    }
+
+    #hero .container{
+
+        justify-content:center;
+
+        padding-top:120px;
+
+    }
+
+    .hero-content{
+
+        align-items:center;
+
+    }
+
+    .hero-description{
+
+        max-width:650px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+}

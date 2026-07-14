@@ -1,0 +1,661 @@
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+#neuro{
+
+    position:fixed;
+
+    right:36px;
+
+    bottom:32px;
+
+    width:170px;
+
+    height:220px;
+
+    z-index:9999;
+
+    user-select:none;
+
+    transform: scale(0.5);
+transform-origin: bottom right;
+
+}
+
+/* ==========================================================
+   SHADOW
+========================================================== */
+
+.neuro-shadow{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    width:92px;
+
+    height:18px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.18);
+
+    filter:blur(8px);
+
+    animation:shadowFloat 4s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   ROBOT
+========================================================== */
+
+.robot{
+
+    position:absolute;
+
+    inset:0;
+
+    cursor:pointer;
+
+    animation:float 4s ease-in-out infinite;
+
+    transition:.35s;
+
+}
+
+.robot.hover{
+
+    transform:scale(1.06);
+
+}
+
+/* ==========================================================
+   HEAD
+========================================================== */
+
+.head{
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:105px;
+
+    height:88px;
+
+    border-radius:36px;
+
+    background:linear-gradient(
+        145deg,
+        #9ceeff,
+        #58dfff
+    );
+
+    box-shadow:
+        inset 0 8px 14px rgba(255,255,255,.45),
+        0 12px 30px rgba(88,223,255,.25);
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+.body{
+
+    position:absolute;
+
+    left:50%;
+
+    top:82px;
+
+    transform:translateX(-50%);
+
+    width:92px;
+
+    height:92px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        160deg,
+        #82e4ff,
+        #3495ff
+    );
+
+    animation:breathe 3.5s ease-in-out infinite;
+
+    box-shadow:
+        inset 0 8px 16px rgba(255,255,255,.25),
+        0 10px 26px rgba(52,149,255,.25);
+
+}
+
+/* ==========================================================
+   SCREEN
+========================================================== */
+
+.screen{
+
+    position:absolute;
+
+    width:46px;
+
+    height:34px;
+
+    border-radius:12px;
+
+    left:50%;
+
+    top:24px;
+
+    transform:translateX(-50%);
+
+    background:#dffcff;
+
+    overflow:hidden;
+
+}
+
+.screen-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(88,223,255,.9),
+        transparent
+    );
+
+    animation:scan 2.5s linear infinite;
+
+}
+
+/* ==========================================================
+   EYES
+========================================================== */
+
+.eye{
+
+    position:absolute;
+
+    width:10px;
+
+    height:16px;
+
+    background:#10324b;
+
+    border-radius:20px;
+
+    top:34px;
+
+    animation:blink 6s infinite;
+
+}
+
+.eye.left{
+
+    left:28px;
+
+}
+
+.eye.right{
+
+    right:28px;
+
+}
+
+/* ==========================================================
+   MOUTH
+========================================================== */
+
+.mouth{
+
+    position:absolute;
+
+    width:22px;
+
+    height:8px;
+
+    left:50%;
+
+    top:55px;
+
+    transform:translateX(-50%);
+
+    border-bottom:3px solid #10324b;
+
+    border-radius:0 0 20px 20px;
+
+}
+
+/* ==========================================================
+   CHEEKS
+========================================================== */
+
+.cheek{
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#ffd0ef;
+
+    opacity:.8;
+
+    top:48px;
+
+}
+
+.cheek.left{
+
+    left:14px;
+
+}
+
+.cheek.right{
+
+    right:14px;
+
+}
+
+/* ==========================================================
+   ARMS
+========================================================== */
+
+.arm{
+
+    position:absolute;
+
+    width:18px;
+
+    height:60px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        #8ce9ff,
+        #4ea9ff
+    );
+
+    top:92px;
+
+}
+
+.arm.left{
+
+    left:20px;
+
+    transform:rotate(28deg);
+
+}
+
+.arm.right{
+
+    right:20px;
+
+    transform:rotate(-28deg);
+
+}
+
+/* ==========================================================
+   LEGS
+========================================================== */
+
+.leg{
+
+    position:absolute;
+
+    width:16px;
+
+    height:40px;
+
+    border-radius:20px;
+
+    background:#58dfff;
+
+    top:168px;
+
+}
+
+.leg.left{
+
+    left:64px;
+
+}
+
+.leg.right{
+
+    right:64px;
+
+}
+
+/* ==========================================================
+   ANTENNAS
+========================================================== */
+
+.antenna{
+
+    position:absolute;
+
+    width:5px;
+
+    height:26px;
+
+    background:#58dfff;
+
+    top:-16px;
+
+}
+
+.antenna.left{
+
+    left:56px;
+
+    transform:rotate(-30deg);
+
+}
+
+.antenna.right{
+
+    right:56px;
+
+    transform:rotate(30deg);
+
+}
+
+.ball{
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#bdf7ff;
+
+    top:-8px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    box-shadow:0 0 12px #58dfff;
+
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+@keyframes shadowFloat{
+
+    0%,100%{
+
+        transform:translateX(-50%) scale(1);
+
+        opacity:.22;
+
+    }
+
+    50%{
+
+        transform:translateX(-50%) scale(.88);
+
+        opacity:.12;
+
+    }
+
+}
+
+@keyframes breathe{
+
+    0%,100%{
+
+        transform:translateX(-50%) scale(1);
+
+    }
+
+    50%{
+
+        transform:translateX(-50%) scale(1.025);
+
+    }
+
+}
+
+@keyframes blink{
+
+    0%,46%,100%{
+
+        transform:scaleY(1);
+
+    }
+
+    48%{
+
+        transform:scaleY(.08);
+
+    }
+
+    50%{
+
+        transform:scaleY(1);
+
+    }
+
+}
+
+@keyframes scan{
+
+    from{
+
+        transform:translateX(-100%);
+
+    }
+
+    to{
+
+        transform:translateX(100%);
+
+    }
+
+}
+/* ==========================================================
+   SPEECH BUBBLE
+========================================================== */
+
+.neuro-bubble{
+
+    position:absolute;
+
+    right:125px;
+
+    bottom:90px;
+
+    width:220px;
+
+    padding:16px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    color:#21425e;
+
+    font-family:Inter,sans-serif;
+
+    font-size:14px;
+
+    line-height:1.45;
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.12);
+
+    opacity:0;
+
+    transform:
+
+        translateY(10px)
+
+        scale(.95);
+
+    transition:.35s;
+
+    pointer-events:none;
+
+}
+
+.neuro-bubble strong{
+
+    display:block;
+
+    color:#2c9cff;
+
+    margin-bottom:8px;
+
+    font-size:16px;
+
+}
+
+.neuro-bubble.show{
+
+    opacity:1;
+
+    transform:
+
+        translateY(0)
+
+        scale(1);
+
+}
+
+/* ==========================================================
+   ARM WAVE
+========================================================== */
+
+.arm.right{
+
+    transform-origin:
+
+        top center;
+
+}
+
+.arm.right.wave{
+
+    animation:
+
+        wave 1.4s ease-in-out 2;
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.robot:hover .screen{
+
+    box-shadow:
+
+        0 0 18px #7ce9ff;
+
+}
+
+.robot:hover .ball{
+
+    box-shadow:
+
+        0 0 20px #7ce9ff;
+
+}
+
+.robot:hover{
+
+    filter:
+
+        drop-shadow(
+
+            0 0 20px
+
+            rgba(88,223,255,.35)
+
+        );
+
+}
+
+/* ==========================================================
+   WAVE
+========================================================== */
+
+@keyframes wave{
+
+    0%{
+
+        transform:rotate(-28deg);
+
+    }
+
+    25%{
+
+        transform:rotate(-5deg);
+
+    }
+
+    50%{
+
+        transform:rotate(-45deg);
+
+    }
+
+    75%{
+
+        transform:rotate(-8deg);
+
+    }
+
+    100%{
+
+        transform:rotate(-28deg);
+
+    }
+
+}
